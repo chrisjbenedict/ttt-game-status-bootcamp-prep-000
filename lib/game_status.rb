@@ -24,5 +24,5 @@ def won?(board)
 end
 
 def full?(board)
-  board.all?{|entry| entry == "X" || extry == "O"}
+  board.all?{|entry| entry == "X" || entry == "O"}
 end
