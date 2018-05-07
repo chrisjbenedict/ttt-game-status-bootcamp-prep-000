@@ -39,10 +39,7 @@ def over?(board)
 end
 
 def winner(board)
-  won = won?(board)
-   if won != nil
-     return board[won[0]]
-   elsif draw?(board) != nil
-     return nil
-   end
+  if won?(board)
+    return board[won?(board)[0]]
+  end
 end
