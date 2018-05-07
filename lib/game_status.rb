@@ -34,3 +34,9 @@ end
 def over?(board)
   won?(board) || full?(board) || draw?(board)
 end
+
+def winner?(board)
+  if WIN_COMBINATIONS.all? do |token|
+    token.X?
+  end
+end
