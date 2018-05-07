@@ -18,7 +18,10 @@ WIN_COMBINATIONS = [
 def won?(board)
   if board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] || board != WIN_COMBINATIONS
     false
-  elsif board == WIN_COMBINATIONS[0]
-    WIN_COMBINATIONS[0]
-    end
+  end
+  WIN_COMBINATIONS.detect do |winner|
+    board[winner[0]] == board[winner[1]] &&
+    board[winner[1]] == board[winner[2]] &&
+    position_taken?(board, winner[0])
+  end
 end
