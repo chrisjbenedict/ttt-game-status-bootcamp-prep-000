@@ -40,6 +40,6 @@ end
 
 def winner?(board)
   if won?(board) && board[win_combo[0]] == "X" && board[win_combo[1]] == "X" && board[win_combo[2]] == "X"
-    return "X"
+    winner(board) == "X"
   end
 end
