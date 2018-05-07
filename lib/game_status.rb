@@ -36,13 +36,13 @@ def over?(board)
 end
 
 def winner?(board)
-  WIN_COMBINATIONS.detect {
-    if WIN_COMBINATIONS.all? == "X"
+  if !won?
+    nil
+  else WIN_COMBINATIONS.each do |win_combo|
+    if won?(board, 'X', win_combo)
       "X"
-    elsif WIN_COMBINATIONS.all? == "O"
+    elsif won?(board, 'O', win_combo)
       "O"
-    else
-      draw?(board)
     end
-  }
+  end
 end
