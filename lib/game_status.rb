@@ -38,7 +38,7 @@ def over?(board)
   won?(board) || full?(board) || draw?(board)
 end
 
-def winner?(board)
+def winner(board)
   if won?(board) && board[win_combo[0]] == "X" && board[win_combo[1]] == "X" && board[win_combo[2]] == "X"
     winner(board) == "X"
   end
