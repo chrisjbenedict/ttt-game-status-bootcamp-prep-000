@@ -16,9 +16,6 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] || board != WIN_COMBINATIONS
-    false
-  end
   WIN_COMBINATIONS.detect do |winner|
     board[winner[0]] == board[winner[1]] &&
     board[winner[1]] == board[winner[2]] &&
