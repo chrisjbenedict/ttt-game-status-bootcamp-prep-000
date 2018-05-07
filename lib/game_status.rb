@@ -40,6 +40,7 @@ end
 
 def winner?(board)
   if won?(board)
-    return board[won?(board)[0]]
+    winner?(board) == "X" || winner?(board) == "O"
+    puts "#{winner?(board)}"
   end
 end
