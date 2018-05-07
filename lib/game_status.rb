@@ -39,10 +39,9 @@ def over?(board)
 end
 
 def winner?(board)
-    if board[win_combo[0]].each? == "X" && board[win_combo[1]].each? == "X" && board[win_combo[2]].each? == "X"
-      return "X"
-    elsif board[win_combo[0]] == "O" && board[win_combo[1]] == "O" && board[win_combo[2]] == "O"
-      return "O"
-    end
-  false
+  if won?(board) && WIN_COMBINATIONS.any? {|i| i == "X"}
+    return "X"
+  else
+    return "O"
+  end
 end
