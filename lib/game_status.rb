@@ -18,5 +18,7 @@ WIN_COMBINATIONS = [
 def won?(board)
   if board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] || board != WIN_COMBINATIONS
     false
-  end
+  elsif board = WIN_COMBINATIONS[0]
+    WIN_COMBINATIONS[0]
+    end
 end
